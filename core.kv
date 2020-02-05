@@ -1,0 +1,51 @@
+<LoginScreen>:
+    user_id: user_id
+    user_password: user_password
+	height: 240
+	size_hint: 1, None
+	padding: 40, 0, 40, 0
+	pos_hint: {"center_y":0.55}
+    spacing: 10
+    cols: 1
+    Label:
+    	text: "Kivy Application"
+    TextInput:
+        id: user_id
+        size_hint: 1, None
+        height: 30
+        border: 0, 5, 0, 5
+        font_size: "14sp"
+        valign: 'center'
+    TextInput:
+        id: user_password
+        size_hint: 1, None
+        height: 30
+        border: 0, 5, 0, 5
+        font_size: "14sp"
+        password: True
+    BoxLayout:
+    	size_hint: 0.5, 0.5
+		Label:
+		Button:
+		    id: "login"
+			size_hint: None, None
+			width: 70
+			height: 30
+    		border: 5, 5, 5, 5
+    		background_color: 116, 1, 1, 0.6
+    		text: "Login"
+    		on_press: root.on_login()
+    	Label:
+	BoxLayout:
+		size_hint: .5, .5
+		Label:
+		Button:
+		    id: "signup"
+			text: "create account?"
+			width: 120
+			height: 30
+			size_hint: None,None
+			background_color: 1, 1, 1, 0.3
+		Label:
+
+
