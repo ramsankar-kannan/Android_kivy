@@ -64,9 +64,12 @@
 			background_color: 1, 1, 1, 0.3
 		Label:
 
+<SpinnerOption>:
+    size_hint: 1, None
+    height: 25
+    border: 5, 5, 5, 5
+
 <SignupScreen>:
-    user_id: user_id
-    user_password: user_password
     cols: 2
     padding: 20, 30, 20, 30
     row_force_default: True
@@ -82,8 +85,11 @@
         text: "Role"
         size_hint_x: None
         width: 60
-    Label:
-        text: "Voter"
+    BoxLayout:
+    	orientation: "vertical"
+    	Spinner:
+    		values: "voter", "candidate"
+    		size_hint: 1, 0.5
     Label:
         text: "ID"
         size_hint_x: None
@@ -132,3 +138,4 @@
         width: 60
     Button:
         text: "Button 6"
+

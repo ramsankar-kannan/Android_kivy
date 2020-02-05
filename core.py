@@ -33,7 +33,7 @@ class LoginScreen(GridLayout):
 class TempApp(App):
 
     def build(self):
-        return LoginScreen()
+        return SignupScreen()
 
 
 if __name__ == "__main__":
