@@ -10,11 +10,22 @@ from kivy.uix.button import Button
 from kivy.properties import ObjectProperty, StringProperty
 
 
+class SignupScreen(GridLayout):
+    user_id = ObjectProperty(None)
+    user_password = ObjectProperty(None)
+
+
 class LoginScreen(GridLayout):
+    role_voter = ObjectProperty(None)
+    role_candidate = ObjectProperty(None)
     user_id = ObjectProperty(None)
     user_password = ObjectProperty(None)
 
     def on_login(self):
+        if self.role_voter.state == "down":
+            print("role:", self.role_voter.text)
+        else:
+            print("role:", self.role_candidate.text)
         print("username:", self.user_id.text)
         print("password:", self.user_password.text)
 

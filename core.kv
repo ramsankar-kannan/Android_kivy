@@ -1,26 +1,42 @@
 <LoginScreen>:
+    role_voter: role_voter
+    role_candidate: role_candidate
     user_id: user_id
     user_password: user_password
-	height: 240
+	height: 220
 	size_hint: 1, None
 	padding: 40, 0, 40, 0
 	pos_hint: {"center_y":0.55}
     spacing: 10
     cols: 1
     Label:
+    	size_hint: 0.5, 0.5
+    	background_color: 116, 1, 1, 0.6
     	text: "Kivy Application"
+    BoxLayout:
+    	size_hint: 0.5, None
+    	height: 25
+    	spacing: 10
+    	ToggleButton:
+    	    id: role_voter
+    		text: "Voter"
+    		group: "role"
+    	ToggleButton:
+    	    id: role_candidate
+    		text: "Candidate"
+    		group: "role"
     TextInput:
         id: user_id
         size_hint: 1, None
-        height: 30
-        border: 0, 5, 0, 5
+        height: 25
+        border: 0, 2, 0, 2
         font_size: "14sp"
         valign: 'center'
     TextInput:
         id: user_password
         size_hint: 1, None
-        height: 30
-        border: 0, 5, 0, 5
+        height: 25
+        border: 0, 2, 0, 2
         font_size: "14sp"
         password: True
     BoxLayout:
@@ -30,7 +46,7 @@
 		    id: "login"
 			size_hint: None, None
 			width: 70
-			height: 30
+			height: 25
     		border: 5, 5, 5, 5
     		background_color: 116, 1, 1, 0.6
     		text: "Login"
@@ -43,9 +59,76 @@
 		    id: "signup"
 			text: "create account?"
 			width: 120
-			height: 30
+			height: 25
 			size_hint: None,None
 			background_color: 1, 1, 1, 0.3
 		Label:
 
-
+<SignupScreen>:
+    user_id: user_id
+    user_password: user_password
+    cols: 2
+    padding: 20, 30, 20, 30
+    row_force_default: True
+    row_default_height: 25
+    spacing: 10
+    Label:
+    	text: "             Create Account"
+    	size_hint_x: None
+        width: 60
+        bold: True
+    Label:
+    Label:
+        text: "Role"
+        size_hint_x: None
+        width: 60
+    Label:
+        text: "Voter"
+    Label:
+        text: "ID"
+        size_hint_x: None
+        width: 60
+    Button:
+        text: "value"
+    Label:
+        text: "Password"
+        size_hint_x: None
+        width: 60
+    Button:
+        text: "Button 4"
+    Label:
+        text: "Button 5"
+        size_hint_x: None
+        width: 60
+    Button:
+        text: "Button 6"
+    Label:
+    	text: "      User Details"
+    	size_hint_x: None
+        width: 60
+        bold: True
+    Label:
+    Label:
+        text: "Name"
+        size_hint_x: None
+        width: 60
+    Label:
+        text: "Something"
+    Label:
+        text: "DOB"
+        size_hint_x: None
+        width: 60
+    Button:
+        text: "Value"
+    Label:
+        text: "Constituency"
+        size_hint_x: None
+        width: 60
+    Button:
+        text: "Button 4"
+    Label:
+        text: "Address"
+        size_hint_x: None
+        width: 60
+    Button:
+        text: "Button 6"
