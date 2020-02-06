@@ -70,72 +70,155 @@
     border: 5, 5, 5, 5
 
 <SignupScreen>:
-    cols: 2
-    padding: 20, 30, 20, 30
-    row_force_default: True
-    row_default_height: 25
-    spacing: 10
+    orientation: 'vertical'
+    padding: 30
+    spacing: 0
     Label:
-    	text: "             Create Account"
-    	size_hint_x: None
-        width: 60
+        text: "Create Account"
         bold: True
+        text_size: self.size
+        valign: "top"
+        halign: "left"
+        size_hint: 1, None
+        height: 30
+    GridLayout:
+    	cols: 2
+    	spacing: 5
+    	row_force_default: True
+        row_default_height: 25
+        Label:
+        	text: "Role"
+        	text_size: self.size
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	BoxLayout:
+    		orientation: "vertical"
+    		Spinner:
+    			values: "voter", "candidate"
+    			size_hint: 1, 0.5
+    	Label:
+        	text: "ID"
+        	text_size: self.size
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	TextInput:
+        	text: "value"
+        	font_size: "12sp"
+    	Label:
+        	text: "Password"
+        	text_size: cm(1.7), cm(2)
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	TextInput:
+        	text: "password"
+        	font_size: "12sp"
+        	password: True
+    	Label:
+        	text: "Confirm Password"
+        	text_size: cm(1.7), cm(2)
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	TextInput:
+        	text: "Button 6"
+        	font_size: "12sp"
+        	password: True
     Label:
-    Label:
-        text: "Role"
-        size_hint_x: None
-        width: 60
-    BoxLayout:
-    	orientation: "vertical"
-    	Spinner:
-    		values: "voter", "candidate"
-    		size_hint: 1, 0.5
-    Label:
-        text: "ID"
-        size_hint_x: None
-        width: 60
-    Button:
-        text: "value"
-    Label:
-        text: "Password"
-        size_hint_x: None
-        width: 60
-    Button:
-        text: "Button 4"
-    Label:
-        text: "Button 5"
-        size_hint_x: None
-        width: 60
-    Button:
-        text: "Button 6"
-    Label:
-    	text: "      User Details"
-    	size_hint_x: None
-        width: 60
+    	text: "User Details"
         bold: True
-    Label:
-    Label:
-        text: "Name"
-        size_hint_x: None
-        width: 60
-    Label:
-        text: "Something"
-    Label:
-        text: "DOB"
-        size_hint_x: None
-        width: 60
-    Button:
-        text: "Value"
-    Label:
-        text: "Constituency"
-        size_hint_x: None
-        width: 60
-    Button:
-        text: "Button 4"
-    Label:
-        text: "Address"
-        size_hint_x: None
-        width: 60
-    Button:
-        text: "Button 6"
-
+        text_size: self.size
+        valign: "middle"
+        halign: "left"
+        size_hint: 1, None
+        height: 30
+    GridLayout:
+    	cols: 2
+    	spacing: 5
+    	row_force_default: True
+        row_default_height: 25
+    	Label:
+        	text: "Name"
+        	text_size: self.size
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	Label:
+        	text: "Something"
+        	text_size: self.size
+        	font_size: "12sp"
+        	halign: "left"
+        	valign: "middle"
+    	Label:
+        	text: "DOB"
+        	text_size: self.size
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	Label:
+        	text: "Value"
+        	text_size: self.size
+        	font_size: "12sp"
+        	halign: "left"
+        	valign: "middle"
+    	Label:
+        	text: "Voting Place"
+        	text_size: cm(1.6), cm(2)
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	Label:
+        	text: "Button 4"
+        	text_size: self.size
+        	font_size: "12sp"
+        	halign: "left"
+        	valign: "middle"
+    	Label:
+        	text: "Address"
+        	text_size: self.size
+        	font_size: "12sp"
+        	bold: True
+    		halign: "left"
+    		valign: "middle"
+        	size_hint_x: None
+        	width: 60
+    	Label:
+        	text: "Button 6"
+        	text_size: self.size
+        	font_size: "12sp"
+        	halign: "left"
+        	valign: "middle"
+	BoxLayout:
+		size_hint: 1, None
+		height: 25
+		Button:
+			text: "verify"
+			font_size: "12sp"
+			bold: True
+		Button:
+			text: "create"
+			font_size: "12sp"
+			bold: True
